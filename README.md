@@ -24,5 +24,4 @@ sites/
 
 Deployed via GitHub Pages. Each site is a static folder — no build step required.
 
-Live at: `https://<github-username>.github.io/<repo-name>/sites/<business-slug>/`
-(or a custom path once we wire up Pages — TBD once the GitHub account/repo exists)
+Live at: `https://alex-wuethrich.github.io/local-site-makeovers/sites/<business-slug>/`
