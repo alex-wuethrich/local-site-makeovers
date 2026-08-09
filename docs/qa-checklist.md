@@ -11,3 +11,4 @@ Run through this before calling any new site done (used by the `/new-site` skill
 - [ ] **Contact links**: `tel:`/`mailto:` hrefs are correctly formatted and match the displayed text.
 - [ ] **Favicon**: present and business-appropriate (e.g. emoji-based `data:` favicon), not the browser default.
 - [ ] **No build artifacts**: no `node_modules/`, no unused dependencies — site opens directly from `index.html`.
+- [ ] **Own repo**: site lives in its own GitHub repo (not a folder in this toolkit repo), with GitHub Pages enabled and the live URL confirmed.

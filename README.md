@@ -1,27 +1,21 @@
-# Local Site Makeovers
+# site-pitch-toolkit
 
-Redesigns of local business websites, built as pitches to show owners what a modern site could look like.
+Shared tooling for building pitch websites for local businesses — redesigns built to show owners what a modern site could look like.
 
-## Structure
+This repo holds the **process**, not the sites. Each business site lives in its own separate GitHub repo (see `AGENTS.md`), created and built via the `/new-site` skill.
 
-Each business gets its own folder under `/sites/`:
+## What's here
 
-```
-sites/
-  _template/       starter template — copy this for each new business
-  <business-slug>/ e.g. joes-pizza, main-street-dentist
-```
+- `AGENTS.md` — conventions every site must follow (structure, design philosophy, content-honesty rule, technical bar).
+- `template/` — a plain structural starting point (sections only, no visual style) for a new site's skeleton.
+- `docs/qa-checklist.md` — checklist run before any site is called done.
+- `.claude/skills/new-site/SKILL.md` — the `/new-site` skill: intake → bespoke build → its own repo → QA → live URL.
 
 ## Workflow
 
-1. Find a local business with an outdated/broken site.
-2. Copy `sites/_template` to `sites/<business-slug>`.
-3. Fill in real business info (name, hours, services, phone, address, photos).
-4. Commit and push — GitHub Pages serves it automatically.
-5. Visit the shop with the live URL to show them.
+1. Open Claude Code with this repo (`C:\Claude`) as the working directory so the `/new-site` skill is available.
+2. Run `/new-site` and answer the intake questions for the business.
+3. The skill creates a new GitHub repo for that business, builds the site, and enables GitHub Pages.
+4. Visit the shop with the live URL to show them.
 
-## Hosting
-
-Deployed via GitHub Pages. Each site is a static folder — no build step required.
-
-Live at: `https://alex-wuethrich.github.io/local-site-makeovers/sites/<business-slug>/`
+Site repos live locally under `C:\Sites\<business-slug>\`, hosted at `https://alex-wuethrich.github.io/<business-slug>/`.

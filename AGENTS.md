@@ -1,16 +1,16 @@
 # Agent instructions for this repo
 
-This repo produces pitch websites for real local businesses (see `README.md` for the outreach workflow and hosting). These rules exist so any Claude Code session can build a new site correctly without re-deriving the process each time.
+This is **`site-pitch-toolkit`** — shared process and tooling for building pitch websites for real local businesses. It does not contain the sites themselves. These rules exist so any Claude Code session can build a new site correctly without re-deriving the process each time.
 
-## Structure
+## Structure: one repo per business
 
-- One folder per business under `sites/<business-slug>/` — `index.html`, `styles.css`, and `script.js` if any interactivity is used.
-- `sites/_template/` is a plain structural starting point (sections, no build step), not a visual style to copy verbatim — see Design philosophy below.
-- Static only: no build step, no bundler, no npm dependencies. Everything must run by opening `index.html` directly in a browser.
+Every business site is its own **separate GitHub repo** (`https://github.com/alex-wuethrich/<business-slug>`), not a folder in this repo. Local checkouts live under `C:\Sites\<business-slug>\`, this toolkit repo stays at `C:\Claude`. Each site repo contains just `index.html`, `styles.css`, `script.js` (if needed), and a short `README.md` — static only, no build step, no bundler, no npm dependencies, everything runs by opening `index.html` directly in a browser.
+
+`template/` in *this* repo is a plain structural starting point (sections, no build step), not a visual style to copy verbatim — see Design philosophy below.
 
 ## Design philosophy: bespoke every time
 
-Every site should have its own visual identity — fonts, color palette, and small decorative touches — tailored to that specific business's vibe (cozy bakery vs. modern dentist vs. hardware store should not look the same). Do not reuse another business's specific design as a template. `_template` gives you the section skeleton (hero, offerings, story/about, hours or process, contact, footer) to start from structurally; the look and feel should be designed fresh for each business based on its intake answers.
+Every site should have its own visual identity — fonts, color palette, and small decorative touches — tailored to that specific business's vibe (cozy bakery vs. modern dentist vs. hardware store should not look the same). Do not reuse another business's specific design as a template. `template/` gives you the section skeleton (hero, offerings, story/about, hours or process, contact, footer) to start from structurally; the look and feel should be designed fresh for each business based on its intake answers.
 
 ## Reusable behavior patterns
 
@@ -37,4 +37,4 @@ Before calling a site done, run through `docs/qa-checklist.md`.
 
 ## Building a new site
 
-Use the `/new-site` skill (`.claude/skills/new-site/SKILL.md`) to scaffold and build a new business site end-to-end: intake questions → bespoke build → QA checklist. After that, finish with the manual steps in `README.md` (review, add real photos, commit, push).
+Use the `/new-site` skill (`.claude/skills/new-site/SKILL.md`), run from this repo (`C:\Claude`), to build a new business site end-to-end: intake → bespoke build → **its own new GitHub repo** → QA checklist → GitHub Pages enabled → live URL reported back. See the skill file for the exact steps.
