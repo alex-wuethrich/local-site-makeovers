@@ -24,6 +24,10 @@ These are generic, framework-agnostic patterns — reuse the *behavior*, not lit
 
 Never fabricate testimonials, reviews, customer names, or contact details (phone numbers, emails, addresses). If real information hasn't been supplied yet, leave an explicit, unmissable placeholder like `[TODO: phone number]` instead of a plausible-looking fake. A pitch site is meant to be shown to the real owner — invented "customer quotes" or fake numbers undermine that and are not acceptable even as a mockup.
 
+## Copy style
+
+Don't use em dashes (—) in body copy - they read as generated/AI-written. Use a short hyphen with spaces (` - `) instead, or restructure the sentence.
+
 ## Baseline technical bar
 
 Every site must:
